@@ -1,0 +1,10 @@
+@use '../../functions' as *;
+
+$layout-values: flex-start, flex-end, center, space-between, space-around;
+
+// Generate justify content classes
+@each $value in $layout-values {
+    .#{camelize($value)} {
+        justify-content: $value;
+    }
+}

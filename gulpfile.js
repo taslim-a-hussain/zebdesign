@@ -5,7 +5,7 @@ const uglifycss = require('gulp-uglifycss');
 const build = () => {
     return src(['src/sass/**/*.scss', '!src/sass/**/variables.scss'])
         .pipe(sass())
-        .pipe(uglifycss())
+        // .pipe(uglifycss())
         .pipe(dest('dist'));
 };
 

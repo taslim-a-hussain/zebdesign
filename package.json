@@ -6,6 +6,9 @@
   "repository": "git@github.com:taslim-a-hussain/zebstyler.git",
   "author": "Taslim A Hussain",
   "license": "MIT",
+  "scripts": {
+    "build-css": "gulp"
+  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
