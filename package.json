@@ -1,0 +1,15 @@
+{
+  "name": "zebstyler",
+  "version": "1.0.0",
+  "description": "The ReactJS component styler",
+  "main": "index.js",
+  "repository": "git@github.com:taslim-a-hussain/zebstyler.git",
+  "author": "Taslim A Hussain",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglifycss": "^1.1.0",
+    "sass": "^1.50.0"
+  }
+}
