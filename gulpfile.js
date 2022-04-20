@@ -6,7 +6,7 @@ const build = () => {
     return src(['src/sass/**/*.scss', '!src/sass/**/variables.scss'])
         .pipe(sass())
         // .pipe(uglifycss())
-        .pipe(dest('dist'));
+        .pipe(dest('css-dist'));
 };
 
 

@@ -2,17 +2,24 @@
   "name": "zebstyler",
   "version": "1.0.0",
   "description": "The ReactJS component styler",
-  "main": "index.js",
+  "source": "public/index.html",
   "repository": "git@github.com:taslim-a-hussain/zebstyler.git",
   "author": "Taslim A Hussain",
   "license": "MIT",
   "scripts": {
+    "start": "parcel",
+    "build": "parcel build --dist-dir production",
     "build-css": "gulp"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
     "gulp-uglifycss": "^1.1.0",
+    "parcel": "^2.4.1",
     "sass": "^1.50.0"
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   }
 }
