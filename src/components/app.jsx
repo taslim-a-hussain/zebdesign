@@ -1,11 +1,11 @@
 import {container, containerFluid} from '../../css-dist/styler.module.css';
-import Colors from './colors';
+import {Gray} from './colors';
 
 const App = () => {
     return (
         <div className={container}>
             <h1>React ZebStyler</h1>
-            <Colors />
+            <Gray />
         </div>
     );
 };

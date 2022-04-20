@@ -1,23 +1,14 @@
-import * as zeb from '../../css-dist/styler.module.css';
+import * as zeb from '../../../../css-dist/styler.module.css';
+import {findKeysWithPrefix} from '../../../functions';
 
-const Colors = () => {
+const Gencolors = ({colorsObj, prefix}) => {
 
-    const {bgWhite, bgGray10, bgGray20, bgGray30, bgGray40, bgGray50, bgGray60, bgGray70, bgGray80, bgGray90, bgGray, bgBlack} = zeb;
-
-    const betweenWhiteBlack = [bgWhite, bgGray10, bgGray20, bgGray30, bgGray40, bgGray50, bgGray60, bgGray70, bgGray80, bgGray90, bgGray, bgBlack];
-
-
+    const colors = findKeysWithPrefix(colorsObj, prefix);
+    
     return (
-        <>
-            <div className={zeb.row}>
-                <div className={`${zeb.col12xs} ${zeb.col6sm}`}>
-                    <p>Use prefix fg (foreground color) with color names. Example: fgBlack</p>
-                    <p>Use prefix bg (background color) with color names. Example: bgBlack</p>
-                </div>
-            </div>
-            <div className={`${zeb.row} ${zeb.gap2}`}>
+        <div className={`${zeb.row} ${zeb.gap2}`} >
                 {
-                    betweenWhiteBlack.map((color, index) => {
+                    colors.map((color, index) => {
                         return (
                         <div className={`${zeb.col12xs} ${zeb.col6sm} ${zeb.col4md} ${zeb.col1lg}`} key={index}>
                             <div className={`${color}`} style={{
@@ -41,9 +32,8 @@ const Colors = () => {
                         );
                     })
                 }
-            </div>
-        </>
+        </div>
     );
 };
 
-export default Colors;
+export default Gencolors;
