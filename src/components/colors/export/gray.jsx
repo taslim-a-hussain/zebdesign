@@ -1,18 +1,18 @@
-import * as zeb from '../../../../css-dist/styler.module.css';
-import * as colors from '../../../../css-dist/colors/class/gray.module.css';
+import * as colors from '../../../../css-dist/colors/gray/gray.module.css';
 import Gencolors from '../gen/gencolors';
 
-const Gray = () => {
+const Gray = ({zeb}) => {
 
     return (
         <>
             <div className={zeb.row}>
-                <div className={`${zeb.col12xs} ${zeb.col6sm}`}>
-                    <p>Use prefix fg (foreground color) with color names. Example: fgBlack</p>
-                    <p>Use prefix bg (background color) with color names. Example: bgBlack</p>
+                <div className={`${zeb.col12xs}`}>
+                    <h3>Color Classes</h3>
+                    <p>Use prefix <strong>fg</strong> (foreground color) with color names. Example: <strong>fgBlack</strong>.
+                    Use prefix <strong>bg</strong> (background color) with color names. Example: <strong>bgBlack</strong>.</p>
                 </div>
             </div>
-            <Gencolors colorsObj={colors} prefix='bg' />
+            <Gencolors colorsObj={colors} prefix='bg' zeb={zeb} />
         </>
     );
 };

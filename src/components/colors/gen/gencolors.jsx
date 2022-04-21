@@ -1,7 +1,6 @@
-import * as zeb from '../../../../css-dist/styler.module.css';
 import {findKeysWithPrefix} from '../../../functions';
 
-const Gencolors = ({colorsObj, prefix}) => {
+const Gencolors = ({colorsObj, prefix, zeb}) => {
 
     const colors = findKeysWithPrefix(colorsObj, prefix);
     
