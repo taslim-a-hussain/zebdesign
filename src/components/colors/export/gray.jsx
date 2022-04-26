@@ -7,7 +7,7 @@ const Gray = ({zeb}) => {
         <>
             <div className={zeb.row}>
                 <div className={`${zeb.col12xs}`}>
-                    <h3>Color Classes</h3>
+                    <h4>Grays</h4>
                     <p>Use prefix <strong>fg</strong> (foreground color) with color names. Example: <strong>fgBlack</strong>.
                     Use prefix <strong>bg</strong> (background color) with color names. Example: <strong>bgBlack</strong>.</p>
                 </div>

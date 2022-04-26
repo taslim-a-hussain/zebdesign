@@ -1,0 +1,23 @@
+@use '../inc/bstrap' as *;
+@use '../../functions' as *;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+// Generate theme colors
+@each $key, $value in $theme-colors {
+    .#{camelize('bg '+$key)} {
+        background-color: $value;
+    }
+    .#{camelize('fg '+$key)} {
+      color: $value;
+    }
+}

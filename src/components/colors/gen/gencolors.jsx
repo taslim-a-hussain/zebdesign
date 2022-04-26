@@ -1,6 +1,21 @@
 import {findKeysWithPrefix} from '../../../functions';
 
-const Gencolors = ({colorsObj, prefix, zeb}) => {
+const Gencolors = ({colorsObj, prefix, zeb, totalCols}) => {
+
+    const cols = () => {
+        switch (totalCols) {
+            case 10:
+                return (`${zeb.col12xs} ${zeb.col6sm}`);
+            case 9:
+                return (`${zeb.col12xs} ${zeb.col4sm}`);
+            case 8:
+                return (`${zeb.col12xs} ${zeb.col3sm}`);
+            case 6:
+                return (`${zeb.col12xs} ${zeb.col3sm} ${zeb.col2md}`);
+            default:
+                return (`${zeb.col12xs} ${zeb.col6sm} ${zeb.col4md} ${zeb.col1lg}`);
+        }
+    };
 
     const colors = findKeysWithPrefix(colorsObj, prefix);
     
@@ -9,10 +24,9 @@ const Gencolors = ({colorsObj, prefix, zeb}) => {
                 {
                     colors.map((color, index) => {
                         return (
-                        <div className={`${zeb.col12xs} ${zeb.col6sm} ${zeb.col4md} ${zeb.col1lg}`} key={index}>
+                        <div className={cols()} key={index}>
                             <div className={`${color}`} style={{
                                 border: '1px solid rgba(0,0,0,0.8)',
-                                height: 'auto',
                                 minHeight: '60px'
                             }}>
                             </div>
