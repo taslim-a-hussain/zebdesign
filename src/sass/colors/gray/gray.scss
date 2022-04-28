@@ -1,22 +1,10 @@
 @use '../inc/bstrap' as *;
 
-.bgWhite {
-    background-color: #fff;
-}
-.fgWhite {
-    color: #fff;
-}
 .bgGray {
     background-color: gray;
 }
 .fgGray {
     color: gray;
-}
-.bgBlack {
-    background-color: #000;
-}
-.fgBlack {
-    color: #000;
 }
 
 // Generate gray color classes for background and 

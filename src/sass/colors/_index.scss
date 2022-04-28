@@ -1,5 +1,16 @@
+
 @forward './gray/gray';
-@forward './gray/black-rgba';
 @forward './theme/theme';
-@forward './colors.scss';
-@forward './cmp-colors.scss';
+
+.bgWhite {
+    background-color: #fff;
+}
+.fgWhite {
+    color: #fff;
+}
+.bgBlack {
+    background-color: #000;
+}
+.fgBlack {
+    color: #000;
+}

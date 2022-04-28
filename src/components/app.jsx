@@ -1,30 +1,13 @@
-import * as zeba from '../../css-dist/styler.module.css';
-import {Theme, Colors, CmpColors, Gray, BlackRgba} from './colors';
+import * as design from '../../css-dist/design.module.css';
+import {Theme, Gray} from './colors';
 
 const App = () => {
-    const {container} = zeba;
+    const {container} = design;
     return (
         <div className={container}>
-            <h1>React ZebStyler</h1>
-            <Theme zeb={zeba}/>
-            <Colors zeb={zeba}/>
-            <CmpColors zeb={zeba}/>
-            <Gray zeb={zeba}/>
-            <BlackRgba zeb={zeba}/>
-            {/* <div className={`${zeba.bgSecondary} ${zeba.fgSecondaryCmp}`} style={{
-                width: '400px',
-                borderRadius: '20px',
-                height: '200px',
-                marginTop: '200px',
-                marginBottom: '400px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                fontSize: '80px',
-                fontWeight: 'border'
-            }}>
-                ZebaStyler
-            </div> */}
+            <h1>ZebDesign</h1>
+            <Theme d={design}/>
+            <Gray d={design}/>
         </div>
     );
 };

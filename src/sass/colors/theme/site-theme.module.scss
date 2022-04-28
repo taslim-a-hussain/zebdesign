@@ -1,0 +1,23 @@
+@use '../inc/bstrap' as *;
+@use '../../functions' as *;
+@use 'sass:math';
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+// Generate theme colors
+@each $key, $value in $theme-colors {
+    $lightness: math.ceil(strip-unit(lightness($value)));
+    $inv-color: invert($value, 50%);
+    .bg#{capitalize($key)}_bg#{$lightness}_bg#{escape($value)}_bg#{escape($inv-color)} {
+        background-color: $value;
+    }
+}

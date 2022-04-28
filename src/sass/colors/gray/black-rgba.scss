@@ -1,9 +1,0 @@
-// Generate Black rgba colors
-@for $i from 1 through 9 {
-    .bgBlackA#{$i} {
-        background-color: rgba(#000, $i * 0.1);
-    }
-    .fgBlackA#{$i} {
-        color: rgba(#000, $i * 0.1);
-    }
-}

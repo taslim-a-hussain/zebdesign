@@ -1,0 +1,13 @@
+@use '../inc/bstrap' as *;
+@use '../../functions' as *;
+@use 'sass:math';
+
+
+// Generate gray color classes for background and 
+@each $key, $value in $grays {
+    $lightness: math.ceil(strip-unit(lightness($value)));
+    $inv-color: invert($value, 100%);
+    .bgGray#{$key}_bg#{$lightness}_bg#{escape($value)}_bg#{escape($inv-color)} {
+        background-color: $value;
+    }
+}
